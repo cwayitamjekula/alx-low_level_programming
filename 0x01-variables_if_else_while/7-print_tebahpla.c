@@ -1,17 +1,19 @@
 #include <stdio.h>
+
 /**
- *main - entry point
+ * main - Entrry point
  *
- *Return: 0
+ * Return: 0
  */
 int main(void)
 {
-char a = 'z';
-while (a >= 'a')
-{
-putchar(a);
-a--;
-}
-putchar('\n';
-return (0);
+	char a = 'z';
+
+	while (a >= 'a')
+	{
+		putchar(a);
+		a--;
+	}
+	putchar('\n');
+	return (0);
 }
