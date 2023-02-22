@@ -14,7 +14,7 @@ int count;
 count = 0;
 while (count < 0)
 {
-for (alpphabet = 'a' ; alphabet <= 'z' ; alphabet++)
+for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
 {
 _putchar(alphabet);
 }
