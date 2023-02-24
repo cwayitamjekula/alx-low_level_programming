@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_most_numbers - entry point
  *
@@ -12,12 +12,11 @@ void print_most_numbers(void)
 {
 	int number;
 
-	for (number = '0'; number <= '9'; number++)
+	for (number = 0; number <= 9; number++)
 	{
-		if (number == '2' || number == '4')
-			;
-		else
-			_putchar(number);
+		if (number != 2 && number != 4)
+			
+			putchar(number);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
