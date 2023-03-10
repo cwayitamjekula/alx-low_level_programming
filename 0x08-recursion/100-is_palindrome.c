@@ -24,7 +24,7 @@ int _strlen_rec(char *s)
 {
 if (*s == '\0')
 return (0);
-return ( 1 + _strlen_rec(s + 1));
+return (1 + _strlen_rec(s + 1));
 }
 
 /**
@@ -36,7 +36,7 @@ return ( 1 + _strlen_rec(s + 1));
  */
 int _pal(char *s, int i, int len)
 {
-if (*(s + 1) != *(s + len -1))
+if (*(s + i) != *(s + len - 1))
 return (0);
 if (i >= len)
 return (1);
