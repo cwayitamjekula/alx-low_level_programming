@@ -1,28 +1,25 @@
 #include "lists.h"
-
 /**
- * add_dnodeint - Add a node at the beginning of a linked list
- * @head: A pointer to head of the linked list
- * @n: A constant integer
- * Return: new node or Null if failure
+ * get_dnodeint_at_index -  function that returns the nth node of a linked list
+ * @head: A pointer to the head of a linked list
+ * @index: index at which the node should be taken
+ * Return: node at index of the linked list
  */
-
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *node;
+	unsigned int i;
 
-	node = malloc(sizeof(dlistint_t));
-	if (node == NULL)
+	node = head;
+	i = 0;
+	while (node != NULL)
 	{
-		return (NULL);
+		if (i == index)
+		{
+			return (node);
+		}
+		i++;
+		node = node->next;
 	}
-	node->n = n;
-	node->next = (*head);
-	node->prev = NULL;
-	if ((*head) != NULL)
-	{
-		(*head)->prev = node;
-	}
-	*head = node;
 	return (node);
 }
